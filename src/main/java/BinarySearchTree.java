@@ -25,6 +25,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
         this.root=Root;
     }
 
+    public boolean searchNode(Node<T>root,T data){
+        if(root==null) return false;
+
+        if(root.data==data) return true;
+        else if(root.data.compareTo(data)<0) return searchNode(root.right,data);
+        else return searchNode(root.left,data);
+    }
+
+    public boolean searchNode(T data){
+        return searchNode(this.root,data);
+    }
+
     public void inOrder(Node<T>root){
         if(root==null) return ;
 

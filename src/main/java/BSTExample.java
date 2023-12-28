@@ -17,5 +17,7 @@ public class BSTExample {
         bst.addNode(67);
 
         bst.displayTree();
+        System.out.println();
+        System.out.println(bst.searchNode(63));
     }
 }
